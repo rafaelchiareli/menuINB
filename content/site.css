@@ -1,0 +1,287 @@
+:root {
+    
+    --cor-menu: #018D34;
+    /* --cor-menu:#7FBCD2; */
+            
+    
+    --cor-hover: #fff;
+    --cor-sidebar : #f1f1f1;
+    /* --cor-sidebar : rgb(246, 241, 241); */
+  
+ 
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template: "header header" auto
+        "aside main" 1fr / auto 1fr;
+
+}
+
+header {
+    grid-area: header;
+    background-color: var(--cor-menu);
+     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header nav {
+
+  
+    margin-top: 15px;    
+}
+
+header img{
+    margin-left: 25px;
+    height: 45px;
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.sideBar {
+    padding-top: 50px;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-sidebar);
+    width: auto;   
+    max-width: 337px;
+}
+
+.container h4 {
+    margin-top: 10px;
+    
+}
+
+
+.titulo{
+    word-wrap: break-word;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 337px;
+    align-self: center;
+    margin-top: 15px;
+
+}
+
+main {
+    grid-area: main;
+    overflow-y: scroll;
+    padding: 25px;
+
+}
+
+/*menu*/
+
+.menu ul {
+    
+    list-style-type: none;
+    padding: 10px;
+    position: relative;
+}
+
+.menu ul li {
+    display: inline-block;
+    background-color: #018d34;
+    position: relative;
+    
+}
+
+
+.menu ul li a {
+    
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+   
+}
+
+.menu ul ul li a:hover {
+
+    color: var(--cor-hover);
+    
+}
+
+.menu_animado{
+    animation: growDown 300ms ease-in-out backwards;
+    transform-origin: top left;
+}
+
+/*Submenuu*/
+.menu ul ul {
+    margin-top: 7px;
+    display: none;
+    position: absolute;
+    width: 200px;
+    
+   
+}
+.menu ul li:hover  {
+    background-color: #018de4;
+}
+
+.menu_lente:hover{
+    transform: scale(1.4);
+}
+
+
+.menu ul li:hover ul {
+    display: block;
+
+}
+
+.menu ul ul li a {
+    display: block;
+
+}
+
+.menu ul li ul li {
+    left: -10px;
+}
+
+/*profile*/
+
+
+.container {
+    margin-top: 10px;
+    left: 0;
+}
+
+.container h4 {
+    margin-top: 10px;
+}
+
+.card {
+
+    width: 380px;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #fff;
+    position: relative;
+    height: 370px;
+}
+
+.upper {
+
+    height: 100px;
+
+}
+
+.upper img {
+
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.user {
+    position: relative;
+}
+
+.profile img {
+
+
+    height: 95px;
+    width: 95px;
+    margin-top: -2px;
+
+
+}
+
+.profile {
+
+    position: absolute;
+    top: -50px;
+    left: 38%;
+    height: 100px;
+    width: 100px;
+    border: 3px solid #fff;
+
+    border-radius: 50%;
+
+}
+
+.follow {
+
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+/*profile novo*/
+
+.profile-card {
+    transition: 0.5s;
+    margin-top: 25px;
+}
+/* .profile-card:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+} */
+
+.informacao{
+    margin-top: 20px;
+    display: flex;
+   
+    flex-direction: column;
+    justify-content: flex-start !important;
+    left: 0 !important;
+}
+
+.informacao a {
+    text-align: left !important;
+}
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.social-links ul {
+    padding: 0px;
+    margin: 0px;
+}
+.social-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 2px 0px;
+    font-size: 20px;            
+}
+.social-links ul li a {
+    color: #333;
+    padding: 2px 6px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.social-links ul li:hover a {
+    background-color: #333333;
+    color: #fff;
+    transition: 0.5s;
+}
