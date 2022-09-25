@@ -95,6 +95,7 @@ main {
     display: inline-block;
     background-color: #018d34;
     position: relative;
+  
     
 }
 
@@ -120,7 +121,7 @@ main {
 
 /*Submenuu*/
 .menu ul ul {
-    margin-top: 7px;
+    margin-top: 3px;
     display: none;
     position: absolute;
     width: 200px;
@@ -253,6 +254,8 @@ main {
     justify-content: flex-start !important;
     left: 0 !important;
 }
+
+
 
 .informacao a {
     text-align: left !important;
